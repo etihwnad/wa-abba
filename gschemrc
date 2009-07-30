@@ -1,0 +1,2 @@
+(log-window "later")
+(component-library "${HOME}/wa/gaf/sym")
