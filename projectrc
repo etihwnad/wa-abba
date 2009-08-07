@@ -1,4 +1,0 @@
-schematics page1.sch
-output-name board
-use-files
-elements-dir ~/wa/gaf/packages
