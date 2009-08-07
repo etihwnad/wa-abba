@@ -9,6 +9,7 @@ gsch2pcbrc = "--use-files \
 bomtype = partslist3
 
 .PHONY: bom cir drc pcb sch sim
+.PHONY: clean
 
 bom: $(schematics).bom
 
@@ -34,6 +35,9 @@ sim: cir
 #
 # how to do the deeds
 # 
+clean:
+	rm -f *.log
+
 $(schematics).bom: attribs $(schematics).sch
 	gnetlist -g $(bomtype) -o $(schematics).bom $(schematics).sch
 
