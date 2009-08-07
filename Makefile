@@ -1,37 +1,51 @@
 
-objects = $(patsubst %.sch,%,$(wildcard *.sch))
+schematics = $(basename $(wildcard *.sch))
+pcbs = abb-base
 
-projectrc = projectrc
+gsch2pcbrc = "--use-files \
+			 --elements-dir ~/wa/gaf/packages \
+			 --output-name $(pcbs) \
+			 $(schematics).sch"
+bomtype = partslist3
 
 .PHONY: bom cir drc pcb sch sim
 
-cir: drc $(objects).cir
+bom: $(schematics).bom
+
+cir: $(schematics).cir
 
 # check for errors/warnings
-drc: $(objects).drc
+drc: $(schematics).drc
 
 # generate/update PCB
-pcb: drc $(projectrc)
-	gsch2pcb projectrc
-	pcb board.pcb
+pcb-edit: $(pcbs).pcb
+	pcb $(pcbs).pcb
 
 # edit schematics
 sch:
-	gschem $(objects).sch
+	gschem $(schematics).sch
 
-# run simulation
+# run simulation(s)
 sim: cir
+	@echo "*** no simulations yet ***"
 
 
 
 #
 # how to do the deeds
 # 
-$(objects).drc: $(objects).sch
-	gnetlist -g drc2 $(objects).sch -o $(objects).drc >/dev/null 2>&1
-	#fail on drc error
-	@grep "ERROR\|WARNING" $(objects).drc && exit 1
+$(schematics).bom: attribs $(schematics).sch
+	gnetlist -g $(bomtype) -o $(schematics).bom $(schematics).sch
 
-$(objects).cir: $(objects).drc
-	gnetlist -g spice-sdb $(objects).sch  -o $(objects).cir
+$(schematics).drc: $(schematics).sch
+	gnetlist -g drc2 $(schematics).sch -o $(schematics).drc >/dev/null 2>&1
+	@grep "ERROR\|WARNING" $(schematics).drc && exit 1
+
+$(schematics).cir: $(schematics).drc
+	gnetlist -g spice-sdb $(schematics).sch  -o $(schematics).cir
+	@grep "ERROR\|WARNING" $(schematics).drc && exit 1
+
+$(pcbs).pcb: drc $(schematics).sch
+	@grep "ERROR\|WARNING" $(schematics).drc && exit 1
+	gsch2pcb $(gsch2pcbrc)
 
