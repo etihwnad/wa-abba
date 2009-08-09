@@ -11,6 +11,9 @@ bomtype = partslist3
 .PHONY: bom cir drc pcb sch sim
 .PHONY: clean
 
+default:
+	@echo "need an explicit target"
+
 bom: $(schematics).bom
 
 cir: $(schematics).cir
@@ -36,7 +39,7 @@ sim: cir
 # how to do the deeds
 # 
 clean:
-	rm -f *.log
+	rm -f *.log *.drc
 
 $(schematics).bom: attribs $(schematics).sch
 	gnetlist -g $(bomtype) -o $(schematics).bom $(schematics).sch
@@ -46,8 +49,8 @@ $(schematics).drc: $(schematics).sch
 	@grep "ERROR\|WARNING" $(schematics).drc && exit 1
 
 $(schematics).cir: $(schematics).drc
-	gnetlist -g spice-sdb $(schematics).sch  -o $(schematics).cir
 	@grep "ERROR\|WARNING" $(schematics).drc && exit 1
+	gnetlist -g spice-sdb $(schematics).sch  -o $(schematics).cir
 
 $(pcbs).pcb: drc $(schematics).sch
 	@grep "ERROR\|WARNING" $(schematics).drc && exit 1
