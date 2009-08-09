@@ -1,11 +1,10 @@
 
 schematics = $(basename $(wildcard *.sch))
 pcbs = abb-base
-
-gsch2pcbrc = "--use-files \
+gsch2pcbrc = -v --use-files \
 			 --elements-dir ~/wa/gaf/packages \
 			 --output-name $(pcbs) \
-			 $(schematics).sch"
+			 $(schematics).sch
 bomtype = partslist3
 
 .PHONY: bom cir drc pcb sch sim
@@ -22,7 +21,7 @@ cir: $(schematics).cir
 drc: $(schematics).drc
 
 # generate/update PCB
-pcb-edit: $(pcbs).pcb
+pcb: $(pcbs).pcb
 	pcb $(pcbs).pcb
 
 # edit schematics
@@ -44,15 +43,15 @@ clean:
 $(schematics).bom: attribs $(schematics).sch
 	gnetlist -g $(bomtype) -o $(schematics).bom $(schematics).sch
 
-$(schematics).drc: $(schematics).sch
-	gnetlist -g drc2 $(schematics).sch -o $(schematics).drc >/dev/null 2>&1
-	@grep "ERROR\|WARNING" $(schematics).drc && exit 1
+#$(schematics).sch
+# always drc
+$(schematics).drc:
+	gnetlist -g drc2 -o $(schematics).drc $(schematics).sch >/dev/null 2>&1
+	grep "ERROR\|WARNING" $(schematics).drc
 
-$(schematics).cir: $(schematics).drc
-	@grep "ERROR\|WARNING" $(schematics).drc && exit 1
+$(schematics).cir: drc $(schematics).sch
 	gnetlist -g spice-sdb $(schematics).sch  -o $(schematics).cir
 
 $(pcbs).pcb: drc $(schematics).sch
-	@grep "ERROR\|WARNING" $(schematics).drc && exit 1
 	gsch2pcb $(gsch2pcbrc)
 
