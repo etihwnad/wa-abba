@@ -7,11 +7,14 @@ gsch2pcbrc = -v --use-files \
 			 $(schematics).sch
 bomtype = partslist3
 
-.PHONY: bom cir drc pcb sch sim
+.PHONY: att bom cir drc pcb sch sim
 .PHONY: clean
 
 default:
 	@echo "need an explicit target"
+
+att:
+	gattrib $(schematics).sch
 
 bom: $(schematics).bom
 
