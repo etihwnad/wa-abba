@@ -61,7 +61,7 @@ refdes=R1
 T 42600 48395 5 10 1 1 90 0 1
 value=1k
 T 42600 48795 5 10 1 1 90 0 1
-footprint=0805
+footprint=1206
 }
 C 42900 45600 1 90 0 resistor-1.sym
 {
@@ -72,7 +72,7 @@ refdes=R3
 T 42600 45795 5 10 1 1 90 0 1
 value=1k
 T 42600 46195 5 10 1 1 90 0 1
-footprint=0805
+footprint=1206
 }
 C 44400 47900 1 0 0 resistor-1.sym
 {
@@ -83,7 +83,7 @@ refdes=R2
 T 44595 48200 5 10 1 1 0 0 1
 value=1k
 T 44995 48200 5 10 1 1 0 0 1
-footprint=0805
+footprint=1206
 }
 C 51800 49500 1 0 0 resistor-1.sym
 {
@@ -94,7 +94,7 @@ refdes=R11
 T 51995 49800 5 10 1 1 0 0 1
 value=1k
 T 52395 49800 5 10 1 1 0 0 1
-footprint=0805
+footprint=1206
 }
 C 48500 48100 1 90 0 resistor-1.sym
 {
@@ -105,7 +105,7 @@ refdes=R7
 T 48200 48295 5 10 1 1 90 0 1
 value=1k
 T 48200 48695 5 10 1 1 90 0 1
-footprint=0805
+footprint=1206
 }
 C 43300 42200 1 90 0 resistor-1.sym
 {
@@ -116,7 +116,7 @@ refdes=R8
 T 43000 42395 5 10 1 1 90 0 1
 value=1k
 T 43000 42795 5 10 1 1 90 0 1
-footprint=0805
+footprint=1206
 }
 C 44400 46500 1 0 0 resistor-1.sym
 {
@@ -127,7 +127,7 @@ refdes=R5
 T 44595 46800 5 10 1 1 0 0 1
 value=1k
 T 44995 46800 5 10 1 1 0 0 1
-footprint=0805
+footprint=1206
 }
 C 44300 46800 1 90 0 resistor-1.sym
 {
@@ -138,7 +138,7 @@ refdes=R4
 T 44000 46995 5 10 1 1 90 0 1
 value=1k
 T 44000 47395 5 10 1 1 90 0 1
-footprint=0805
+footprint=1206
 }
 C 50500 49500 1 0 0 resistor-1.sym
 {
@@ -149,7 +149,7 @@ refdes=R9
 T 50695 49800 5 10 1 1 0 0 1
 value=1k
 T 51095 49800 5 10 1 1 0 0 1
-footprint=0805
+footprint=1206
 }
 C 50500 45300 1 0 0 resistor-1.sym
 {
@@ -160,7 +160,7 @@ refdes=R12
 T 50695 45600 5 10 1 1 0 0 1
 value=1k
 T 51095 45600 5 10 1 1 0 0 1
-footprint=0805
+footprint=1206
 }
 C 51800 45300 1 0 0 resistor-1.sym
 {
@@ -171,7 +171,7 @@ refdes=R13
 T 51995 45600 5 10 1 1 0 0 1
 value=1k
 T 52395 45600 5 10 1 1 0 0 1
-footprint=0805
+footprint=1206
 }
 C 48500 46000 1 90 0 resistor-1.sym
 {
@@ -182,7 +182,7 @@ refdes=R10
 T 48200 46195 5 10 1 1 90 0 1
 value=1k
 T 48200 46595 5 10 1 1 90 0 1
-footprint=0805
+footprint=1206
 }
 N 44900 49100 44900 49200 4
 N 44900 50000 44900 50100 4
@@ -278,7 +278,7 @@ refdes=R6
 T 42195 44400 5 10 1 1 0 0 1
 value=1k
 T 42595 44400 5 10 1 1 0 0 1
-footprint=0805
+footprint=1206
 }
 C 42000 42200 1 90 0 capacitor-1.sym
 {
@@ -291,7 +291,7 @@ symversion=0.1
 T 41500 42395 5 10 1 1 90 0 1
 value=1n
 T 41500 42800 5 10 1 1 90 0 1
-footprint=0805
+footprint=1206
 }
 C 41600 45600 1 90 0 capacitor-1.sym
 {
@@ -304,7 +304,7 @@ symversion=0.1
 T 41100 45795 5 10 1 1 90 0 1
 value=1n
 T 41100 46200 5 10 1 1 90 0 1
-footprint=0805
+footprint=1206
 }
 C 43400 43200 1 0 0 capacitor-1.sym
 {
@@ -317,7 +317,7 @@ symversion=0.1
 T 43595 43700 5 10 1 1 0 0 1
 value=1n
 T 44000 43700 5 10 1 1 0 0 1
-footprint=0805
+footprint=1206
 }
 N 41400 48100 41400 46500 4
 N 41400 45600 41400 45200 4
@@ -348,5 +348,5 @@ symversion=0.1
 T 41100 48295 5 10 1 1 90 0 1
 value=1n
 T 41600 48100 5 10 1 1 0 0 1
-footprint=0805
+footprint=1206
 }
