@@ -7,7 +7,7 @@ gsch2pcbrc = -v --use-files \
 			 $(schematics).sch
 bomtype = partslist3
 
-.PHONY: att bom cir drc pcb sch sim
+.PHONY: att bom cir drc drc-all pcb sch sim
 .PHONY: clean
 
 default:
@@ -21,7 +21,7 @@ bom: $(schematics).bom
 cir: $(schematics).cir
 
 # check for errors/warnings
-drc: $(schematics).drc
+drc: drc-all
 
 # generate/update PCB
 pcb: $(pcbs).pcb
@@ -48,9 +48,11 @@ $(schematics).bom: attribs $(schematics).sch
 
 #$(schematics).sch
 # always drc
-$(schematics).drc:
+#$(schematics).drc:
+drc-all:
 	gnetlist -g drc2 -o $(schematics).drc $(schematics).sch >/dev/null 2>&1
-	grep "ERROR\|WARNING" $(schematics).drc
+	@grep "ERROR\|WARNING" $(schematics).drc || exit 0
+	@test "`grep \"ERROR\|WARNING\" $(schematics).drc | wc -l`" -eq 0
 
 $(schematics).cir: drc $(schematics).sch
 	gnetlist -g spice-sdb $(schematics).sch  -o $(schematics).cir
