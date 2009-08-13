@@ -25,7 +25,7 @@ drc: drc-all
 
 # generate/update PCB
 pcb: $(pcbs).pcb
-	pcb $(pcbs).pcb
+	#pcb $(pcbs).pcb
 
 # edit schematics
 sch:
@@ -41,7 +41,7 @@ sim: cir
 # how to do the deeds
 # 
 clean:
-	rm -f *.log *.drc
+	rm -f *.log *.drc *~
 
 $(schematics).bom: attribs $(schematics).sch
 	gnetlist -g $(bomtype) -o $(schematics).bom $(schematics).sch
