@@ -14,10 +14,6 @@ ChangePinName(R5, 2, 2)
 ChangePinName(R4, 1, 1)
 ChangePinName(R4, 2, 2)
 
-# Start of element R3
-ChangePinName(R3, 1, 1)
-ChangePinName(R3, 2, 2)
-
 # Start of element C6
 ChangePinName(C6, 2, 2)
 ChangePinName(C6, 1, 1)
@@ -25,6 +21,12 @@ ChangePinName(C6, 1, 1)
 # Start of element R15
 ChangePinName(R15, 1, 1)
 ChangePinName(R15, 2, 2)
+
+# Start of element L1
+ChangePinName(L1, 3, 3)
+ChangePinName(L1, 4, 4)
+ChangePinName(L1, 1, 1)
+ChangePinName(L1, 2, 2)
 
 # Start of element C5
 ChangePinName(C5, 2, 2)
@@ -37,10 +39,6 @@ ChangePinName(R14, 2, 2)
 # Start of element R2
 ChangePinName(R2, 1, 1)
 ChangePinName(R2, 2, 2)
-
-# Start of element R1
-ChangePinName(R1, 1, 1)
-ChangePinName(R1, 2, 2)
 
 # Start of element C4
 ChangePinName(C4, 2, 2)
