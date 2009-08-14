@@ -41,7 +41,7 @@ sim: cir
 # how to do the deeds
 # 
 clean:
-	rm -f *.log *.drc *~
+	rm -f *.log *.drc *~ $(pcbs).new.pcb $(pcbs).pcb?*
 
 $(schematics).bom: attribs $(schematics).sch
 	gnetlist -g $(bomtype) -o $(schematics).bom $(schematics).sch
