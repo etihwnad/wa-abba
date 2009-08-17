@@ -1,0 +1,11 @@
+;only show local symbols
+(reset-component-library)
+(define localsymbols "${HOME}/wa/gaf/sym")
+(component-library (build-path localsymbols "analog"))
+(component-library (build-path localsymbols "conn"))
+(component-library (build-path localsymbols "misc"))
+(component-library (build-path localsymbols "mixed"))
+(component-library (build-path localsymbols "passive"))
+(component-library (build-path localsymbols "power"))
+
+(sort-component-library "enabled")
