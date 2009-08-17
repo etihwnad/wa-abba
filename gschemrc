@@ -1,9 +1,0 @@
-(log-window "later")
-(define default-titleblock "")
-
-#only make available custom syms
-(reset-component-library)
-
-# EAGLE-style mouse wheel zooming
-(warp-cursor "disabled")
-(output-color "enabled")
