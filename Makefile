@@ -1,10 +1,18 @@
 
-schematics = $(basename $(wildcard *.sch))
-pcbs = abb-base
+pages = $(basename $(wildcard *.sch))
+boards = abb-base
+
+schematics = $(addsuffix .sch, $(pages))
+pcbs = $(addsuffix .pcb, $(boards))
+boms = $(addsuffix .bom, $(pages))
+cirs = $(addsuffix .cir, $(pages))
+drcs = $(addsuffix .drc, $(pages))
+
 gsch2pcbrc = -v --use-files \
 			 --elements-dir ~/wa/gaf/packages \
 			 --output-name $(pcbs) \
 			 $(schematics).sch
+
 bomtype = partslist3
 
 .PHONY: att bom cir drc drc-all pcb sch sim
@@ -14,22 +22,22 @@ default:
 	@echo "need an explicit target"
 
 att:
-	gattrib $(schematics).sch
+	gattrib $(schematics)
 
-bom: $(schematics).bom
+bom: $(boms)
 
-cir: $(schematics).cir
+cir: $(cirs)
 
 # check for errors/warnings
-drc: drc-all
+drc: $(drcs)
 
 # generate/update PCB
-pcb: $(pcbs).pcb
+pcb: $(pcbs)
 	#pcb $(pcbs).pcb
 
 # edit schematics
 sch:
-	gschem $(schematics).sch
+	gschem $(schematics)
 
 # run simulation(s)
 sim: cir
@@ -40,23 +48,23 @@ sim: cir
 #
 # how to do the deeds
 # 
-clean:
-	rm -f *.log *.drc *~ $(pcbs).new.pcb $(pcbs).pcb?*
-
-$(schematics).bom: attribs $(schematics).sch
-	gnetlist -g $(bomtype) -o $(schematics).bom $(schematics).sch
+%.bom: %.sch attribs
+	gnetlist -g $(bomtype) -o $@ $< >/dev/null 2>&1
 
 #$(schematics).sch
 # always drc
 #$(schematics).drc:
-drc-all:
-	gnetlist -g drc2 -o $(schematics).drc $(schematics).sch >/dev/null 2>&1
-	@grep "ERROR\|WARNING" $(schematics).drc || exit 0
-	@test "`grep \"ERROR\|WARNING\" $(schematics).drc | wc -l`" -eq 0
+%.drc : %.sch
+	gnetlist -g drc2 -o $@ $< >/dev/null 2>&1
+	@grep "ERROR\|WARNING" $@ || exit 0
+	@test "`grep \"ERROR\|WARNING\" $@ | wc -l`" -eq 0
 
-$(schematics).cir: drc $(schematics).sch
-	gnetlist -g spice-sdb $(schematics).sch  -o $(schematics).cir
+%.cir: %.sch drc 
+	gnetlist -g spice-sdb -o $@ $< >/dev/null
 
-$(pcbs).pcb: drc $(schematics).sch
+%.pcb: $(schematics) drc 
 	gsch2pcb $(gsch2pcbrc)
+
+clean:
+	rm -f *.log *.drc *~ $(pcbs:.pcb=.new.pcb).new.pcb $(pcbs:=.pcb?*)
 
