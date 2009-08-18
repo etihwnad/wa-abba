@@ -18,7 +18,7 @@ Base - USB Stereo DAC/ADC
 C 44000 57800 1 0 0 pcm2906b.sym
 {
 T 48400 62700 5 10 1 1 0 6 1
-refdes=U?
+refdes=U1
 T 46200 60500 5 10 0 0 0 0 1
 device=PCM2906B
 T 46200 60700 5 10 0 0 0 0 1
