@@ -66,5 +66,6 @@ sim: cir
 	gsch2pcb $(gsch2pcbrc)
 
 clean:
-	rm -f *.log *.drc *~ $(pcbs:.pcb=.new.pcb) $(pcbs:.pcb=.pcb?*)
+	rm -f *.log *.drc *~
+	rm -f *.cmd $(pcbs:.pcb=.new.pcb) $(pcbs:.pcb=.pcb?*)
 
