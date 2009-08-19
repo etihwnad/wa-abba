@@ -11,7 +11,7 @@ drcs = $(addsuffix .drc, $(pages))
 gsch2pcbrc = -v --use-files --skip-m4 \
 			 --elements-dir ~/wa/gaf/packages \
 			 --output-name $(boards) \
-			 $(schematics).sch
+			 $(schematics)
 
 bomtype = partslist3
 
@@ -63,7 +63,7 @@ sim: cir
 	gnetlist -g spice-sdb -o $@ $< >/dev/null
 
 %.pcb: $(schematics) drc 
-	gsch2pcb $(gsch2pcbrc)
+	gsch2pcb $(gsch2pcbrc) > gsch2pcb.log
 
 clean:
 	rm -f *.log *.drc *~
