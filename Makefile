@@ -63,7 +63,8 @@ sim: cir
 	gnetlist -g spice-sdb -o $@ $< >/dev/null
 
 %.pcb: $(schematics) drc 
-	gsch2pcb $(gsch2pcbrc) > gsch2pcb.log
+	gsch2pcb $(gsch2pcbrc) > gsch2pcb.log 2>gsch2pcb.err
+	tail -n +27 gsch2pcb.err
 
 clean:
 	rm -f *.log *.drc *~
