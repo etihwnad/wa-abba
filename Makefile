@@ -8,9 +8,9 @@ boms = $(addsuffix .bom, $(pages))
 cirs = $(addsuffix .cir, $(pages))
 drcs = $(addsuffix .drc, $(pages))
 
-gsch2pcbrc = -v --use-files \
+gsch2pcbrc = -v --use-files --skip-m4 \
 			 --elements-dir ~/wa/gaf/packages \
-			 --output-name $(pcbs) \
+			 --output-name $(boards) \
 			 $(schematics).sch
 
 bomtype = partslist3
