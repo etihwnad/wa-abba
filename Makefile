@@ -67,6 +67,6 @@ sim: cir
 	tail -n +27 gsch2pcb.err
 
 clean:
-	rm -f *.log *.drc *~
+	rm -f *.log *.err *.drc *~
 	rm -f *.cmd $(pcbs:.pcb=.new.pcb) $(pcbs:.pcb=.pcb?*)
 
