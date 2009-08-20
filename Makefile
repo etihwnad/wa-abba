@@ -1,6 +1,6 @@
 
+#one pcb per schematic page here for prototyping
 pages = $(basename $(wildcard *.sch))
-#boards = abb-base
 boards = $(pages)
 
 schematics = $(addsuffix .sch, $(pages))
@@ -11,8 +11,6 @@ drcs = $(addsuffix .drc, $(pages))
 
 gsch2pcbrc = -v --use-files --skip-m4 \
 			 --elements-dir ~/wa/gaf/packages \
-			 #--output-name $(boards) 
-			 #$(schematics)
 
 bomtype = partslist3
 
@@ -52,9 +50,6 @@ sim: cir
 %.bom: %.sch attribs
 	gnetlist -g $(bomtype) -o $@ $< >/dev/null 2>&1
 
-#$(schematics).sch
-# always drc
-#$(schematics).drc:
 %.drc : %.sch
 	gnetlist -g drc2 -o $@ $< >/dev/null 2>&1
 	@grep "ERROR\|WARNING" $@ || exit 0
@@ -63,7 +58,6 @@ sim: cir
 %.cir: %.sch drc 
 	gnetlist -g spice-sdb -o $@ $< >/dev/null
 
-#%.pcb: $(schematics) drc 
 %.pcb: %.sch drc 
 	gsch2pcb $(gsch2pcbrc) --output-name $(@:.pcb=) \
 		$< >$(@:.pcb=.log) 2>$(@:.pcb=.err)
