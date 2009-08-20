@@ -1,6 +1,7 @@
 
 pages = $(basename $(wildcard *.sch))
-boards = abb-base
+#boards = abb-base
+boards = $(pages)
 
 schematics = $(addsuffix .sch, $(pages))
 pcbs = $(addsuffix .pcb, $(boards))
@@ -10,8 +11,8 @@ drcs = $(addsuffix .drc, $(pages))
 
 gsch2pcbrc = -v --use-files --skip-m4 \
 			 --elements-dir ~/wa/gaf/packages \
-			 --output-name $(boards) \
-			 $(schematics)
+			 #--output-name $(boards) 
+			 #$(schematics)
 
 bomtype = partslist3
 
@@ -33,7 +34,7 @@ drc: $(drcs)
 
 # generate/update PCB
 pcb: $(pcbs)
-	#pcb $(pcbs).pcb
+	#pcb $(pcbs)
 
 # edit schematics
 sch:
@@ -62,9 +63,10 @@ sim: cir
 %.cir: %.sch drc 
 	gnetlist -g spice-sdb -o $@ $< >/dev/null
 
-%.pcb: $(schematics) drc 
-	gsch2pcb $(gsch2pcbrc) > gsch2pcb.log 2>gsch2pcb.err
-	tail -n +27 gsch2pcb.err
+#%.pcb: $(schematics) drc 
+%.pcb: %.sch drc 
+	gsch2pcb $(gsch2pcbrc) --output-name $(@:.pcb=) $< >$(@:.pcb=.log) 2>$(@:.pcb=.err)
+	tail -n +27 $(@:.pcb=.err)
 
 clean:
 	rm -f *.log *.err *.drc *~
