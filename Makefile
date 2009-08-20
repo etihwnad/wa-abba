@@ -65,8 +65,11 @@ sim: cir
 
 #%.pcb: $(schematics) drc 
 %.pcb: %.sch drc 
-	gsch2pcb $(gsch2pcbrc) --output-name $(@:.pcb=) $< >$(@:.pcb=.log) 2>$(@:.pcb=.err)
-	tail -n +27 $(@:.pcb=.err)
+	gsch2pcb $(gsch2pcbrc) --output-name $(@:.pcb=) \
+		$< >$(@:.pcb=.log) 2>$(@:.pcb=.err)
+	@cat $(@:.pcb=.log)
+	@tail -n +27 $(@:.pcb=.err)
+	@test "`cat $(@:.pcb=.err) | wc -l `" -le 27
 
 clean:
 	rm -f *.log *.err *.drc *~
