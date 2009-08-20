@@ -7,5 +7,8 @@
 (component-library "${HOME}/wa/gaf/sym/mixed")
 (component-library "${HOME}/wa/gaf/sym/passive")
 (component-library "${HOME}/wa/gaf/sym/power")
+(component-library ".")
+
+(source-library ".")
 
 (sort-component-library "enabled")
