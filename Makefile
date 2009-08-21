@@ -8,14 +8,18 @@ pcbs = $(addsuffix .pcb, $(boards))
 boms = $(addsuffix .bom, $(pages))
 cirs = $(addsuffix .cir, $(pages))
 drcs = $(addsuffix .drc, $(pages))
+pdfs = $(addsuffix .pdf, $(pages))
+pss  = $(addsuffix .ps, $(pages))
 
 gsch2pcbrc = -v --use-files --skip-m4 \
 			 --elements-dir ~/wa/gaf/packages \
 
 bomtype = partslist3
 
+GEDA_HOME = /usr/local/geda-0.0.2
+
 .PHONY: att bom cir drc drc-all pcb sch sim
-.PHONY: clean
+.PHONY: clean print pdf ps
 
 default:
 	@echo "need an explicit target"
@@ -33,6 +37,13 @@ drc: $(drcs)
 # generate/update PCB
 pcb: $(pcbs)
 	#pcb $(pcbs)
+
+print: ps
+	for f in $(pss); do lpr $$f; done
+
+pdf: $(pdfs)
+
+ps: $(pss)
 
 # edit schematics
 sch:
@@ -65,7 +76,14 @@ sim: cir
 	@tail -n +27 $(@:.pcb=.err)
 	@test "`cat $(@:.pcb=.err) | wc -l `" -le 27
 
+%.ps: %.sch
+	gschem -p -o $@ -s $(GEDA_HOME)/share/gEDA/scheme/print.scm $<
+
+%.pdf: %.ps
+	ps2pdf $<
+
 clean:
 	rm -f *.log *.err *.drc *~
 	rm -f *.cmd $(pcbs:.pcb=.new.pcb) $(pcbs:.pcb=.pcb?*)
+	rm -f $(pss) $(pdfs)
 
