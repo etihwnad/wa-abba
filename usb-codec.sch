@@ -44,7 +44,7 @@ refdes=S1
 T 50300 62900 5 10 0 0 0 0 1
 device=SWITCH_PUSHBUTTON_NO
 T 50500 62400 5 10 0 0 0 0 1
-footprint=XXX
+footprint=SW__Panasonic_EVQPA_Series
 }
 C 49900 61900 1 0 0 switch-pushbutton-no-1.sym
 {
@@ -53,7 +53,7 @@ refdes=S2
 T 50300 62500 5 10 0 0 0 0 1
 device=SWITCH_PUSHBUTTON_NO
 T 50500 62000 5 10 0 0 0 0 1
-footprint=XXX
+footprint=SW__Panasonic_EVQPA_Series
 }
 C 49900 61500 1 0 0 switch-pushbutton-no-1.sym
 {
@@ -62,7 +62,7 @@ refdes=S3
 T 50300 62100 5 10 0 0 0 0 1
 device=SWITCH_PUSHBUTTON_NO
 T 50500 61600 5 10 0 0 0 0 1
-footprint=XXX
+footprint=SW__Panasonic_EVQPA_Series
 }
 N 49800 62300 49900 62300 4
 N 49900 61900 49800 61900 4
@@ -263,7 +263,7 @@ refdes=C213
 T 52000 59100 5 10 0 0 0 0 1
 symversion=0.1
 T 52400 58300 5 10 0 0 0 0 1
-footprint=XXX
+footprint=CAP_Panasonic_B
 }
 C 51800 57500 1 0 0 capacitor-2.sym
 {
@@ -274,7 +274,7 @@ refdes=C214
 T 52000 58400 5 10 0 0 0 0 1
 symversion=0.1
 T 52400 57600 5 10 0 0 0 0 1
-footprint=XXX
+footprint=CAP_Panasonic_B
 }
 C 44200 58600 1 0 0 capacitor-2.sym
 {
@@ -285,7 +285,7 @@ refdes=C205
 T 44400 59500 5 10 0 0 0 0 1
 symversion=0.1
 T 44800 58700 5 10 0 0 0 0 1
-footprint=XXX
+footprint=CAP_Panasonic_B
 }
 N 49800 58400 51800 58400 4
 N 49800 58000 51700 58000 4
@@ -305,7 +305,7 @@ refdes=C206
 T 44400 58800 5 10 0 0 0 0 1
 symversion=0.1
 T 44800 58000 5 10 0 0 0 0 1
-footprint=XXX
+footprint=CAP_Panasonic_B
 }
 N 46900 58400 45200 58400 4
 C 46800 58200 1 180 0 capacitor-2.sym
@@ -317,7 +317,7 @@ refdes=C210
 T 46600 57300 5 10 0 0 180 0 1
 symversion=0.1
 T 46200 58100 5 10 0 0 180 0 1
-footprint=XXX
+footprint=CAP_Panasonic_B
 T 46500 58100 5 10 1 1 0 0 1
 value=10u
 }
@@ -330,7 +330,7 @@ refdes=C208
 T 46500 58900 5 10 0 1 180 0 1
 symversion=0.1
 T 46100 59700 5 10 0 1 180 0 1
-footprint=XXX
+footprint=CAP_Panasonic_B
 T 46400 59700 5 10 1 1 0 0 1
 value=10u
 }
@@ -407,9 +407,9 @@ C 44100 61000 1 0 0 resistor-1.sym
 {
 T 44400 61400 5 10 0 0 0 0 1
 device=RESISTOR
-T 44200 61300 5 10 1 1 0 0 1
+T 44100 61300 5 10 1 1 0 0 1
 refdes=R202
-T 44595 61300 5 10 1 1 0 0 1
+T 44695 61200 5 10 1 1 0 0 1
 value=2R2
 T 44295 60800 5 10 1 1 0 0 1
 footprint=0805
