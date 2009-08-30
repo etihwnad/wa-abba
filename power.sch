@@ -1,0 +1,11 @@
+v 20080127 1
+C 46900 39700 1 0 0 CC3-xxxxDF-E.sym
+{
+T 48800 41700 5 10 1 1 0 6 1
+refdes=U401
+T 47300 42100 5 10 0 0 0 0 1
+device=CC3-xxxxDF-E
+T 47300 42300 5 10 0 0 0 0 1
+footprint=TDK-Lambda_CC3-F-E
+}
+C 40000 34900 0 0 0 title-B.sym
