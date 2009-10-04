@@ -154,6 +154,8 @@ def maxlen(a):
     m2 = lambda x,y: max(len(x[1]),len(y[1]))
     if len(a) > 1:
         return reduce(m2, a)
+    elif len(a) == 0:
+        return 0
     else:
         return len(a[0][1])
 
@@ -177,7 +179,7 @@ print 'v 20080127 1'
 # B 103400 12600 1400 400 3 0 0 0 -1 -1 0 -1 -1 -1 -1 -1
 box_x = 400
 box_y = 400
-box_w = 100*(left_text_length + right_text_length) + 400*n_horiz
+box_w = 100*(left_text_length + right_text_length) + 400*max(n_horiz-1,0) + 400
 box_h = max(400*(n_vert - 1) + 400,
             100*(top_text_length + bot_text_length) + 500)
 print 'B %i %i %i %i %i %i %i %i %i %i %i %i %i %i %i %i' % (

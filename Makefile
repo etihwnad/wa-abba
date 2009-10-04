@@ -4,6 +4,7 @@ pages = $(basename $(wildcard *.sch))
 boards = $(pages)
 
 schematics = $(addsuffix .sch, $(pages))
+symbols = $(addsuffix .sym, $(pages))
 pcbs = $(addsuffix .pcb, $(boards))
 boms = $(addsuffix .bom, $(pages))
 cirs = $(addsuffix .cir, $(pages))
@@ -18,7 +19,7 @@ bomtype = partslist3
 
 GEDA_HOME = /usr/local/geda-0.0.2
 
-.PHONY: att bom cir drc drc-all pcb sch sim
+.PHONY: att bom cir drc drc-all pcb sch sym sim
 .PHONY: clean print pdf ps
 
 default:
@@ -46,8 +47,10 @@ pdf: $(pdfs)
 ps: $(pss)
 
 # edit schematics
-sch:
+sch: sym
 	gschem $(schematics)
+
+sym: $(symbols)
 
 # run simulation(s)
 sim: cir
@@ -81,6 +84,9 @@ sim: cir
 
 %.pdf: %.ps
 	ps2pdf $<
+
+%.sym: %.sch
+	./sch2sym.py < $< > $@
 
 clean:
 	rm -f *.log *.err *.drc *~
