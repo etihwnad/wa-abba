@@ -86,7 +86,7 @@ sim: cir
 	ps2pdf $<
 
 %.sym: %.sch
-	./sch2sym.py < $< > $@
+	./sch2sym.py $< $@
 
 clean:
 	rm -f *.log *.err *.drc *~

@@ -8,6 +8,10 @@ fin = sys.stdin
 fout = sys.stdout
 err = sys.stderr
 
+if len(sys.argv) == 3:
+    fin = open(sys.argv[1], 'rb')
+    fout = open(sys.argv[2], 'wb')
+    sch_name = sys.argv[1]
 
 types = {'A': None,
          'B': None,
@@ -173,7 +177,7 @@ def pin_attribute(t, x, y, visible=1, angle=0, origin=0):
 
 
 # version 
-print 'v 20080127 1'
+print >> fout, 'v 20080127 1'
 
 # box
 # B 103400 12600 1400 400 3 0 0 0 -1 -1 0 -1 -1 -1 -1 -1
@@ -182,7 +186,7 @@ box_y = 400
 box_w = 100*(left_text_length + right_text_length) + 400*max(n_horiz-1,0) + 400
 box_h = max(400*(n_vert - 1) + 400,
             100*(top_text_length + bot_text_length) + 500)
-print 'B %i %i %i %i %i %i %i %i %i %i %i %i %i %i %i %i' % (
+print >> fout, 'B %i %i %i %i %i %i %i %i %i %i %i %i %i %i %i %i' % (
     box_x, box_y, box_w, box_h,
     3, 0, 0, 0, -1, -1, 0, -1, -1, -1, -1, -1)
 
@@ -196,18 +200,18 @@ for p in left:
     color = 1
     pin_type = 0
     whichend = 0
-    print 'P %i %i %i %i %i %i %i' % (
+    print >> fout, 'P %i %i %i %i %i %i %i' % (
         pin_x1, pin_y1, pin_x2, pin_y2,
         color, pin_type, whichend)
-    print '{'
+    print >> fout, '{'
 
-    print pin_attribute('pinlabel=%s' % p[1], pin_x2+100, pin_y1,
+    print >> fout, pin_attribute('pinlabel=%s' % p[1], pin_x2+100, pin_y1,
                         visible=1, angle=0, origin=1)
-    print pin_attribute('pinnumber=%i' % n, pin_x1, pin_y1,
+    print >> fout, pin_attribute('pinnumber=%i' % n, pin_x1, pin_y1,
                         visible=0, angle=0, origin=0)
-    print pin_attribute('pinseq=%i' % n, pin_x1, pin_y1,
+    print >> fout, pin_attribute('pinseq=%i' % n, pin_x1, pin_y1,
                         visible=0, angle=0, origin=0)
-    print '}'
+    print >> fout, '}'
     n += 1
     i += 1
 
@@ -221,18 +225,18 @@ for p in right:
     color = 1
     pin_type = 0
     whichend = 1
-    print 'P %i %i %i %i %i %i %i' % (
+    print >> fout, 'P %i %i %i %i %i %i %i' % (
         pin_x1, pin_y1, pin_x2, pin_y2,
         color, pin_type, whichend)
-    print '{'
+    print >> fout, '{'
 
-    print pin_attribute('pinlabel=%s' % p[1], pin_x1-100, pin_y1,
+    print >> fout, pin_attribute('pinlabel=%s' % p[1], pin_x1-100, pin_y1,
                         visible=1, angle=0, origin=7)
-    print pin_attribute('pinnumber=%i' % n, pin_x2, pin_y1,
+    print >> fout, pin_attribute('pinnumber=%i' % n, pin_x2, pin_y1,
                         visible=0, angle=0, origin=0)
-    print pin_attribute('pinseq=%i' % n, pin_x2, pin_y1,
+    print >> fout, pin_attribute('pinseq=%i' % n, pin_x2, pin_y1,
                         visible=0, angle=0, origin=0)
-    print '}'
+    print >> fout, '}'
     n += 1
     i += 1
 
@@ -246,18 +250,18 @@ for p in top:
     color = 1
     pin_type = 0
     whichend = 1
-    print 'P %i %i %i %i %i %i %i' % (
+    print >> fout, 'P %i %i %i %i %i %i %i' % (
         pin_x1, pin_y1, pin_x2, pin_y2,
         color, pin_type, whichend)
-    print '{'
+    print >> fout, '{'
 
-    print pin_attribute('pinlabel=%s' % p[1], pin_x1, pin_y1 - 100,
+    print >> fout, pin_attribute('pinlabel=%s' % p[1], pin_x1, pin_y1 - 100,
                         visible=1, angle=90, origin=7)
-    print pin_attribute('pinnumber=%i' % n, pin_x2, pin_y1,
+    print >> fout, pin_attribute('pinnumber=%i' % n, pin_x2, pin_y1,
                         visible=0, angle=0, origin=0)
-    print pin_attribute('pinseq=%i' % n, pin_x2, pin_y1,
+    print >> fout, pin_attribute('pinseq=%i' % n, pin_x2, pin_y1,
                         visible=0, angle=0, origin=0)
-    print '}'
+    print >> fout, '}'
     n += 1
     i += 1
 
@@ -271,24 +275,42 @@ for p in bot:
     color = 1
     pin_type = 0
     whichend = 1
-    print 'P %i %i %i %i %i %i %i' % (
+    print >> fout, 'P %i %i %i %i %i %i %i' % (
         pin_x1, pin_y1, pin_x2, pin_y2,
         color, pin_type, whichend)
-    print '{'
+    print >> fout, '{'
 
-    print pin_attribute('pinlabel=%s' % p[1], pin_x1, pin_y1 + 100,
+    print >> fout, pin_attribute('pinlabel=%s' % p[1], pin_x1, pin_y1 + 100,
                         visible=1, angle=90, origin=1)
-    print pin_attribute('pinnumber=%i' % n, pin_x2, pin_y1,
+    print >> fout, pin_attribute('pinnumber=%i' % n, pin_x2, pin_y1,
                         visible=0, angle=0, origin=0)
-    print pin_attribute('pinseq=%i' % n, pin_x2, pin_y1,
+    print >> fout, pin_attribute('pinseq=%i' % n, pin_x2, pin_y1,
                         visible=0, angle=0, origin=0)
-    print '}'
+    print >> fout, '}'
     n += 1
     i += 1
 
 # refdes
-print 'T %i %i %i %i %i %i %i %i %i' % (
+print >> fout, 'T %i %i %i %i %i %i %i %i %i' % (
     box_x +box_w, box_y + box_h + 100,
     8, 10, 1, 1, 0, 6, 1)
-print 'refdes=S?'
+print >> fout, 'refdes=S?'
+
+# name
+print >> fout, 'T %i %i %i %i %i %i %i %i %i' % (
+    box_x, box_y + box_h + 100,
+    3, 10, 1, 1, 0, 0, 1)
+print >> fout, 'name=%s' % sch_name.split('.')[0]
+
+# source
+print >> fout, 'T %i %i %i %i %i %i %i %i %i' % (
+    box_x, box_y + box_h + 200,
+    5, 10, 0, 0, 0, 0, 1)
+print >> fout, 'source=%s' % sch_name
+
+# device
+print >> fout, 'T %i %i %i %i %i %i %i %i %i' % (
+    box_x, box_y + box_h + 300,
+    5, 10, 0, 0, 0, 0, 1)
+print >> fout, 'device=SHEET'
 

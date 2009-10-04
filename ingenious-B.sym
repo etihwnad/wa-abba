@@ -56,3 +56,9 @@ pinseq=6
 }
 T 3400 1600 8 10 1 1 0 6 1
 refdes=S?
+T 400 1600 3 10 1 1 0 0 1
+name=ingenious-B
+T 400 1700 5 10 0 0 0 0 1
+source=ingenious-B.sch
+T 400 1800 5 10 0 0 0 0 1
+device=SHEET
