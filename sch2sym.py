@@ -96,6 +96,24 @@ def component(a):
     angle = int(angle)
     mirror = True if mirror == '1' else False
     
+def maxlen(a):
+    m2 = lambda x,y: max(len(x[1]),len(y[1]))
+    if len(a) > 1:
+        return reduce(m2, a)
+    elif len(a) == 0:
+        return 0
+    else:
+        return len(a[0][1])
+
+def pin_attribute(t, x, y, visible=1, angle=0, origin=0):
+    s = 'T %i %i %i %i %i %i %i %i %i\n' % (
+        x, y, 5, 10, visible, 1, angle, origin, 1)
+    s += t
+    return s
+
+
+
+
 #lines = fin.readlines()
 objs = []
 for line in fin:
@@ -154,26 +172,11 @@ if DEBUG:
 n_vert = max(len(left), len(right))
 n_horiz = max(len(top), len(bot))
 
-def maxlen(a):
-    m2 = lambda x,y: max(len(x[1]),len(y[1]))
-    if len(a) > 1:
-        return reduce(m2, a)
-    elif len(a) == 0:
-        return 0
-    else:
-        return len(a[0][1])
-
 left_text_length = maxlen(left)
 right_text_length = maxlen(right)
 top_text_length = maxlen(top)
 bot_text_length = maxlen(bot)
 
-
-def pin_attribute(t, x, y, visible=1, angle=0, origin=0):
-    s = 'T %i %i %i %i %i %i %i %i %i\n' % (
-        x, y, 5, 10, visible, 1, angle, origin, 1)
-    s += t
-    return s
 
 
 # version 
