@@ -1,5 +1,12 @@
 #!/usr/bin/env python
 
+# sch2sym.py input.sch output.sym
+#
+# Given a gschem schematic, create a symbol with pins corresponding to
+# instances of symbols with the device=PORT-{IN,OUT,IO,PAS,PWR}.
+
+# Dan White <dan@whiteaudio.com>
+
 import sys
 
 DEBUG = False
