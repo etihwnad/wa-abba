@@ -19,6 +19,10 @@ bomtype = partslist3
 
 GEDA_HOME = /usr/local/geda-0.0.2
 
+###
+### end variables ###
+###
+
 .PHONY: att bom cir drc drc-all pcb sch sym sim
 .PHONY: clean print pdf ps
 
@@ -37,6 +41,7 @@ drc: $(drcs)
 
 # generate/update PCB
 pcb: $(pcbs)
+	@echo "*** no 'production' testing yet ***"
 	#pcb $(pcbs)
 
 print: ps
@@ -77,7 +82,7 @@ sim: cir
 		$< >$(@:.pcb=.log) 2>$(@:.pcb=.err)
 	@cat $(@:.pcb=.log)
 	@tail -n +27 $(@:.pcb=.err)
-	@test "`cat $(@:.pcb=.err) | wc -l `" -le 27
+	@test "`cat $(@:.pcb=.err) | wc -l `" -le 27 #find errors
 
 %.ps: %.sch
 	gschem -p -o $@ -s $(GEDA_HOME)/share/gEDA/scheme/print.scm $<
