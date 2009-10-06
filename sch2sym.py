@@ -12,6 +12,8 @@ if len(sys.argv) == 3:
     fin = open(sys.argv[1], 'rb')
     fout = open(sys.argv[2], 'wb')
     sch_name = sys.argv[1]
+else:
+    raise Exception, 'usage: %s input.sch output.sym' % sys.argv[0]
 
 types = {'A': None,
          'B': None,
