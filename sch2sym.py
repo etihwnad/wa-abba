@@ -106,9 +106,8 @@ def component(a):
     mirror = True if mirror == '1' else False
     
 def maxlen(a):
-    m2 = lambda x,y: max(len(x[1]),len(y[1]))
     if len(a) > 1:
-        return reduce(m2, a)
+        return reduce(max, map(lambda x: len(x[1]), a))
     elif len(a) == 0:
         return 0
     else:
@@ -137,6 +136,12 @@ for line in fin:
                 break
             att_lines.append(line)
         objs[-1].parse_attributes(att_lines)
+    #ignore embedded components
+    elif line.startswith('['):
+        for line in fin:
+            if line.startswith(']'):
+                break
+            
 
 ports = []
 for o in objs:

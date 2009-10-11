@@ -33,3 +33,96 @@ footprint=S08
 }
 T 16300 6600 9 10 1 0 0 0 1
 Base - Line output (outSmarts)
+C 5800 9400 1 0 0 port-power-1.sym
+{
+T 6000 10000 5 10 0 0 0 0 1
+device=PORT-PWR
+T 6800 9500 5 10 1 1 0 7 1
+refdes=GND
+}
+C 5800 10600 1 0 0 port-power-1.sym
+{
+T 6000 11200 5 10 0 0 0 0 1
+device=PORT-PWR
+T 6800 10700 5 10 1 1 0 7 1
+refdes=Vcc
+}
+C 5800 8200 1 0 0 port-power-1.sym
+{
+T 6000 8800 5 10 0 0 0 0 1
+device=PORT-PWR
+T 6800 8300 5 10 1 1 0 7 1
+refdes=Vee
+}
+C 6000 14300 1 0 0 port-input-1.sym
+{
+T 6200 14900 5 10 0 0 0 0 1
+device=PORT-IN
+T 7500 14600 5 10 1 1 0 7 1
+refdes=line_out_A
+}
+C 6000 13500 1 0 0 port-input-1.sym
+{
+T 6200 14100 5 10 0 0 0 0 1
+device=PORT-IN
+T 7600 13800 5 10 1 1 0 7 1
+refdes=line_out_B
+}
+C 8100 10500 1 270 0 capacitor-2.sym
+{
+T 8800 10300 5 10 0 0 270 0 1
+device=POLARIZED_CAPACITOR
+T 8600 10300 5 10 1 1 270 0 1
+refdes=C?
+T 9000 10300 5 10 0 0 270 0 1
+symversion=0.1
+T 8200 9900 5 10 0 0 270 0 1
+footprint=XXX
+}
+C 8900 10500 1 270 0 capacitor-1.sym
+{
+T 9600 10300 5 10 0 0 270 0 1
+device=CAPACITOR
+T 9600 10300 5 10 1 1 270 0 1
+refdes=C?
+T 9800 10300 5 10 0 0 270 0 1
+symversion=0.1
+T 9400 10305 5 10 1 1 270 0 1
+value=1n
+T 9400 9900 5 10 1 1 270 0 1
+footprint=NULL
+}
+C 8100 9400 1 270 0 capacitor-2.sym
+{
+T 8800 9200 5 10 0 0 270 0 1
+device=POLARIZED_CAPACITOR
+T 8600 9200 5 10 1 1 270 0 1
+refdes=C?
+T 9000 9200 5 10 0 0 270 0 1
+symversion=0.1
+T 8200 8800 5 10 0 0 270 0 1
+footprint=XXX
+}
+C 8900 9400 1 270 0 capacitor-1.sym
+{
+T 9600 9200 5 10 0 0 270 0 1
+device=CAPACITOR
+T 9600 9200 5 10 1 1 270 0 1
+refdes=C?
+T 9800 9200 5 10 0 0 270 0 1
+symversion=0.1
+T 9400 9205 5 10 1 1 270 0 1
+value=1n
+T 9400 8800 5 10 1 1 270 0 1
+footprint=NULL
+}
+N 7500 10700 9100 10700 4
+N 9100 10700 9100 10500 4
+N 8300 10500 8300 10700 4
+N 7500 9500 8300 9500 4
+N 8300 9400 8300 9600 4
+N 8300 9500 9100 9500 4
+N 9100 9400 9100 9600 4
+N 8300 8300 8300 8500 4
+N 7500 8300 9100 8300 4
+N 9100 8300 9100 8500 4

@@ -52,7 +52,7 @@ pdf: $(pdfs)
 ps: $(pss)
 
 # edit schematics
-sch: sym
+sch:
 	gschem $(schematics)
 
 sym: $(symbols)
