@@ -40,7 +40,7 @@ cir: $(cirs)
 drc: $(drcs)
 
 leo:
-	leo projects.leo &
+	leo ~/wa/projects.leo &
 
 # generate/update PCB
 pcb: $(pcbs)
