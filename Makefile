@@ -17,7 +17,8 @@ gsch2pcbrc = -v --use-files --skip-m4 \
 
 bomtype = partslist3
 
-GEDA_HOME = /usr/local/geda-0.0.2
+#set in the environment
+#GEDA_HOME = /usr/local/geda-djw
 
 ###
 ### end variables ###
