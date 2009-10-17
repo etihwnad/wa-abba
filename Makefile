@@ -24,7 +24,7 @@ GEDA_HOME = /usr/local/geda-0.0.2
 ###
 
 .PHONY: att bom cir drc drc-all pcb sch sym sim
-.PHONY: clean print pdf ps
+.PHONY: clean leo print pdf ps
 
 default:
 	@echo "need an explicit target"
@@ -38,6 +38,9 @@ cir: $(cirs)
 
 # check for errors/warnings
 drc: $(drcs)
+
+leo:
+	leo projects.leo &
 
 # generate/update PCB
 pcb: $(pcbs)
