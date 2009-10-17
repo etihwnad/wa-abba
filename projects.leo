@@ -1,1 +1,0 @@
-/home/dan/wa/projects.leo
