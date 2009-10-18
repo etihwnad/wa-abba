@@ -57,7 +57,8 @@ ps: $(pss)
 
 # edit schematics
 sch:
-	gschem $(schematics)
+	#run in background
+	gschem $(schematics) &
 
 sym: $(symbols)
 

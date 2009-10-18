@@ -29,7 +29,7 @@ C 53500 40700 1 0 1 port-power-1.sym
 T 53300 41300 5 10 0 0 0 6 1
 device=PORT-PWR
 T 52500 40800 5 10 1 1 0 1 1
-refdes=GND
+refdes=GNDA
 }
 C 53500 41900 1 0 1 port-power-1.sym
 {
@@ -87,16 +87,44 @@ C 40800 41900 1 0 0 port-power-1.sym
 T 41000 42500 5 10 0 0 0 0 1
 device=PORT-PWR
 T 41800 42000 5 10 1 1 0 7 1
-refdes=Vdcdc
+refdes=Vps
 }
 C 40800 39900 1 0 0 port-power-1.sym
 {
 T 41000 40500 5 10 0 0 0 0 1
 device=PORT-PWR
 T 41800 40000 5 10 1 1 0 7 1
-refdes=dcdcGND
+refdes=GNDPS
 }
 N 42500 40000 47000 40000 4
 N 47000 41100 46000 41100 4
 N 46000 41100 46000 42000 4
 N 46000 42000 42500 42000 4
+C 53500 37100 1 0 1 port-power-1.sym
+{
+T 53300 37700 5 10 0 0 0 6 1
+device=PORT-PWR
+T 52500 37200 5 10 1 1 0 1 1
+refdes=GNDD
+}
+C 53500 38300 1 0 1 port-power-1.sym
+{
+T 53300 38900 5 10 0 0 0 6 1
+device=PORT-PWR
+T 52500 38400 5 10 1 1 0 1 1
+refdes=Vdd
+}
+C 40800 38800 1 0 0 port-power-1.sym
+{
+T 41000 39400 5 10 0 0 0 0 1
+device=PORT-PWR
+T 41800 38900 5 10 1 1 0 7 1
+refdes=Vusb
+}
+C 40800 36800 1 0 0 port-power-1.sym
+{
+T 41000 37400 5 10 0 0 0 0 1
+device=PORT-PWR
+T 41800 36900 5 10 1 1 0 7 1
+refdes=GNDUSB
+}
