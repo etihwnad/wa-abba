@@ -1,64 +1,73 @@
 v 20080127 1
-B 400 400 1900 1600 3 0 0 0 -1 -1 0 -1 -1 -1 -1 -1
+B 400 400 1500 2000 3 0 0 0 -1 -1 0 -1 -1 -1 -1 -1
+P 200 2200 400 2200 1 0 0
+{
+T 500 2200 5 10 1 1 0 1 1
+pinlabel=AinL
+T 200 2200 5 10 0 1 0 0 1
+pinnumber=1
+T 200 2200 5 10 0 1 0 0 1
+pinseq=1
+}
 P 200 1800 400 1800 1 0 0
 {
 T 500 1800 5 10 1 1 0 1 1
-pinlabel=usb_inL
+pinlabel=AinR
 T 200 1800 5 10 0 1 0 0 1
-pinnumber=1
+pinnumber=2
 T 200 1800 5 10 0 1 0 0 1
-pinseq=1
+pinseq=2
 }
 P 200 1400 400 1400 1 0 0
 {
 T 500 1400 5 10 1 1 0 1 1
-pinlabel=usb_inR
+pinlabel=Vusb
 T 200 1400 5 10 0 1 0 0 1
-pinnumber=2
+pinnumber=3
 T 200 1400 5 10 0 1 0 0 1
-pinseq=2
+pinseq=3
 }
 P 200 1000 400 1000 1 0 0
 {
 T 500 1000 5 10 1 1 0 1 1
-pinlabel=Vusb
+pinlabel=GNDUSB
 T 200 1000 5 10 0 1 0 0 1
-pinnumber=3
+pinnumber=4
 T 200 1000 5 10 0 1 0 0 1
-pinseq=3
+pinseq=4
 }
 P 200 600 400 600 1 0 0
 {
 T 500 600 5 10 1 1 0 1 1
-pinlabel=usbGND
+pinlabel=GNDA
 T 200 600 5 10 0 1 0 0 1
-pinnumber=4
-T 200 600 5 10 0 1 0 0 1
-pinseq=4
-}
-P 2300 1800 2500 1800 1 0 1
-{
-T 2200 1800 5 10 1 1 0 7 1
-pinlabel=usb_outL
-T 2500 1800 5 10 0 1 0 0 1
 pinnumber=5
-T 2500 1800 5 10 0 1 0 0 1
+T 200 600 5 10 0 1 0 0 1
 pinseq=5
 }
-P 2300 1400 2500 1400 1 0 1
+P 1900 2200 2100 2200 1 0 1
 {
-T 2200 1400 5 10 1 1 0 7 1
-pinlabel=usb_outR
-T 2500 1400 5 10 0 1 0 0 1
+T 1800 2200 5 10 1 1 0 7 1
+pinlabel=AoutL
+T 2100 2200 5 10 0 1 0 0 1
 pinnumber=6
-T 2500 1400 5 10 0 1 0 0 1
+T 2100 2200 5 10 0 1 0 0 1
 pinseq=6
 }
-T 2300 2100 8 10 1 1 0 6 1
+P 1900 1800 2100 1800 1 0 1
+{
+T 1800 1800 5 10 1 1 0 7 1
+pinlabel=AoutR
+T 2100 1800 5 10 0 1 0 0 1
+pinnumber=7
+T 2100 1800 5 10 0 1 0 0 1
+pinseq=7
+}
+T 1900 2500 8 10 1 1 0 6 1
 refdes=S?
-T 400 2100 3 10 1 1 0 0 1
+T 400 2500 3 10 1 1 0 0 1
 name=usb-codec
-T 400 2200 5 10 0 0 0 0 1
+T 400 2600 5 10 0 0 0 0 1
 source=usb-codec.sch
-T 400 2300 5 10 0 0 0 0 1
+T 400 2700 5 10 0 0 0 0 1
 device=SHEET

@@ -39,14 +39,14 @@ C 56700 69500 1 0 0 port-input-1.sym
 T 56900 70100 5 10 0 0 0 0 1
 device=PORT-IN
 T 58200 69800 5 10 1 1 0 7 1
-refdes=headphone_A
+refdes=InL
 }
 C 56700 68700 1 0 0 port-input-1.sym
 {
 T 56900 69300 5 10 0 0 0 0 1
 device=PORT-IN
 T 58300 69000 5 10 1 1 0 7 1
-refdes=headphone_B
+refdes=InR
 }
 C 58800 65700 1 270 0 capacitor-2.sym
 {
