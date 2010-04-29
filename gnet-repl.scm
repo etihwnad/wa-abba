@@ -1,0 +1,1 @@
+/usr/local/geda-djw/share/gEDA/scheme/gnet-repl.scm
