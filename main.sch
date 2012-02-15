@@ -1,0 +1,71 @@
+v 20110116 2
+C 15200 12900 0 0 0 EMBEDDEDtitle-B.sym
+[
+T 25500 13000 9 10 1 0 0 0 1
+$Id$
+L 24600 13500 32200 13500 15 0 0 0 -1 -1
+B 24600 12900 7600 1400 15 0 0 0 -1 -1 0 -1 -1 -1 -1 -1
+T 24700 13600 15 8 1 0 0 0 1
+TITLE
+T 24700 13000 15 8 1 0 0 0 1
+VERSION:
+T 29600 14400 5 10 0 0 0 0 1
+graphical=1
+B 15200 12900 17000 11000 15 0 0 0 -1 -1 0 -1 -1 -1 -1 -1
+]
+T 25500 13600 9 10 1 0 0 0 1
+Base - Top Level
+C 29100 16100 1 0 0 headphone.sym
+{
+T 31100 17800 5 10 1 1 0 6 1
+refdes=S?
+T 29500 17800 5 10 1 1 0 0 1
+name=headphone
+T 29500 18000 5 10 0 0 0 0 1
+device=SHEET
+}
+C 15900 20300 1 0 0 ingenious-A.sym
+{
+T 18900 22000 5 10 1 1 0 6 1
+refdes=S?
+T 16300 22000 5 10 1 1 0 0 1
+name=ingenious-A
+T 16300 22200 5 10 0 0 0 0 1
+device=SHEET
+}
+C 15900 18100 1 0 0 ingenious-B.sym
+{
+T 18900 19800 5 10 1 1 0 6 1
+refdes=S?
+T 16300 19800 5 10 1 1 0 0 1
+name=ingenious-B
+T 16300 20000 5 10 0 0 0 0 1
+device=SHEET
+}
+C 28900 20100 1 0 0 outsmarts.sym
+{
+T 30900 21700 5 10 1 1 0 6 1
+refdes=S?
+T 29300 21700 5 10 1 1 0 0 1
+name=outsmarts
+T 29300 21900 5 10 0 0 0 0 1
+device=SHEET
+}
+C 17800 13600 1 0 0 power.sym
+{
+T 19600 16500 5 10 1 1 0 6 1
+refdes=S?
+T 18200 16500 5 10 1 1 0 0 1
+name=power
+T 18200 16700 5 10 0 0 0 0 1
+device=SHEET
+}
+C 22800 19200 1 0 0 usb-codec.sym
+{
+T 24700 21700 5 10 1 1 0 6 1
+refdes=S?
+T 23200 21700 5 10 1 1 0 0 1
+name=usb-codec
+T 23200 21900 5 10 0 0 0 0 1
+device=SHEET
+}
