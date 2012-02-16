@@ -1,0 +1,11 @@
+
+;load symbol libraries
+(load "gafrc-libraries")
+
+;disable hierarchy traversal (before presenting 'packages to backend)
+(hierarchy-traversal "disabled")
+
+(define refdes-type-order
+      (list "ACS" "*" "TP" "A"))
+
+; vi:ft=scheme

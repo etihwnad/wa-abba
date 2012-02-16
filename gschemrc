@@ -1,15 +1,9 @@
-;only show local symbols
-(reset-component-library)
-(component-library "${HOME}/wa/gaf/sym/analog")
-(component-library "${HOME}/wa/gaf/sym/conn")
-(component-library "${HOME}/wa/gaf/sym/io")
-(component-library "${HOME}/wa/gaf/sym/misc")
-(component-library "${HOME}/wa/gaf/sym/mixed")
-(component-library "${HOME}/wa/gaf/sym/passive")
-(component-library "${HOME}/wa/gaf/sym/power")
-(component-library "${HOME}/wa/gaf/sym/txrx")
-(component-library ".")
-
-(source-library ".")
 
 (sort-component-library "enabled")
+
+(define default-titleblock "title-wa-85x110.sym")
+(output-type "extents no margins")
+
+(net-selection-mode "enabled_all")
+
+; vi:ft=scheme

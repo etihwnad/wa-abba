@@ -1,0 +1,15 @@
+; global symbol library
+(use-modules (geda os))
+; git submodule
+(component-library-search (expand-env-variables "${WAEDA}/share/waeda/sym"))
+
+; local-only symbols
+;(component-library "sym" "local-sym")
+
+; subpage symbols
+(component-library ".")
+
+; subpages
+(source-library ".")
+
+; vim: ft=scheme
