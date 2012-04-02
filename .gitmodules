@@ -1,0 +1,6 @@
+[submodule "waeda-sym"]
+	path = waeda-sym
+	url = git://git.whiteaudio.com/waeda-sym.git
+[submodule "waeda-fp"]
+	path = waeda-fp
+	url = git://git.whiteaudio.com/waeda-fp.git

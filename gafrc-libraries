@@ -1,10 +1,12 @@
 ; global symbol library
 (use-modules (geda os))
+
 ; git submodule
-(component-library-search (expand-env-variables "${WAEDA}/share/waeda/sym"))
+; waEDA sym library
+(component-library-search "waeda-sym" "waeda")
 
 ; local-only symbols
-;(component-library "sym" "local-sym")
+(component-library "sym" "local-sym")
 
 ; subpage symbols
 (component-library ".")
