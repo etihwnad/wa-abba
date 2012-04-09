@@ -1,6 +1,6 @@
 
 #one pcb per schematic page here for prototyping
-pages = $(basename $(wildcard *.sch))
+pages = headphone ingenious_left_in outsmarts_left
 boards = $(pages)
 
 schematics = $(addsuffix .sch, $(pages))
