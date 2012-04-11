@@ -6,7 +6,7 @@ FileVersion[20091103]
 PCB["" 6000.00mil 5000.00mil]
 
 Grid[1000.000000 0.0000 0.0000 0]
-Cursor[4730.00mil 2260.00mil 0.000000]
+Cursor[2830.00mil 1350.00mil 0.000000]
 PolyArea[3100.006200]
 Thermal[0.500000]
 DRC[10.00mil 10.00mil 10.00mil 10.00mil 15.00mil 10.00mil]
@@ -863,7 +863,7 @@ Element["" "CAPPR-500P-1000D__Panasonic_M-Series-A-Type" "C901" "1n" 2590.00mil 
 
 	)
 
-Element["" "CON_HDR_254P-3N__Molex-KK" "J905" "unknown" 3290.00mil 2110.00mil 0.0000 0.0000 1 100 ""]
+Element["" "CON_HDR_254P-3N__Molex-KK" "J905" "unknown" 3290.00mil 2110.00mil 50.00mil 50.00mil 1 100 ""]
 (
 	Attribute("device" "CONNECTOR_3")
 	Attribute("manufacturer" "unknown")
@@ -892,7 +892,7 @@ Element["" "CON_HDR_254P-3N__Molex-KK" "J905" "unknown" 3290.00mil 2110.00mil 0.
 
 	)
 
-Element["" "CON_HDR_254P-3N__Molex-KK" "J904" "unknown" 3590.00mil 2110.00mil 0.0000 0.0000 1 100 ""]
+Element["" "CON_HDR_254P-3N__Molex-KK" "J904" "unknown" 3590.00mil 2110.00mil 50.00mil 50.00mil 1 100 ""]
 (
 	Attribute("device" "CONNECTOR_3")
 	Attribute("manufacturer" "unknown")
@@ -921,7 +921,7 @@ Element["" "CON_HDR_254P-3N__Molex-KK" "J904" "unknown" 3590.00mil 2110.00mil 0.
 
 	)
 
-Element["" "CON_HDR_254P-3N__Molex-KK" "J903" "unknown" 3890.00mil 2110.00mil 0.0000 0.0000 1 100 ""]
+Element["" "CON_HDR_254P-3N__Molex-KK" "J903" "unknown" 3890.00mil 2110.00mil 50.00mil 50.00mil 1 100 ""]
 (
 	Attribute("device" "CONNECTOR_3")
 	Attribute("manufacturer" "unknown")
@@ -950,7 +950,7 @@ Element["" "CON_HDR_254P-3N__Molex-KK" "J903" "unknown" 3890.00mil 2110.00mil 0.
 
 	)
 
-Element["" "CON_HDR_254P-3N__Molex-KK" "J902" "unknown" 4190.00mil 2110.00mil 0.0000 0.0000 1 100 ""]
+Element["" "CON_HDR_254P-3N__Molex-KK" "J902" "unknown" 4190.00mil 2110.00mil 50.00mil 50.00mil 1 100 ""]
 (
 	Attribute("device" "CONNECTOR_3")
 	Attribute("manufacturer" "unknown")
@@ -979,7 +979,7 @@ Element["" "CON_HDR_254P-3N__Molex-KK" "J902" "unknown" 4190.00mil 2110.00mil 0.
 
 	)
 
-Element["" "CON_HDR_254P-3N__Molex-KK" "J901" "unknown" 4490.00mil 2110.00mil 0.0000 0.0000 1 100 ""]
+Element["" "CON_HDR_254P-3N__Molex-KK" "J901" "unknown" 4490.00mil 2110.00mil 50.00mil 50.00mil 1 100 ""]
 (
 	Attribute("device" "CONNECTOR_3")
 	Attribute("manufacturer" "unknown")
