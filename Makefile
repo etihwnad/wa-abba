@@ -1,6 +1,6 @@
 
 #one pcb per schematic page here for prototyping
-pages = headphone ingenious_left_in outsmarts_left power
+pages = headphone ingenious_left_in outsmarts_left power usb-codec
 boards = $(pages)
 
 schematics = $(addsuffix .sch, $(pages))
