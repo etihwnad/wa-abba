@@ -5,8 +5,8 @@ FileVersion[20091103]
 
 PCB["" 6000.00mil 5000.00mil]
 
-Grid[500.000000 0.0000 5.00mil 1]
-Cursor[1765.00mil 1292.50mil 0.000000]
+Grid[5000.000000 0.0000 5.00mil 1]
+Cursor[2800.00mil 155.00mil 0.000000]
 PolyArea[3100.006200]
 Thermal[0.500000]
 DRC[8.00mil 8.00mil 8.00mil 8.00mil 15.00mil 10.00mil]
@@ -787,7 +787,7 @@ Symbol['~' 12.00mil]
 	SymbolLine[20.00mil 35.00mil 25.00mil 30.00mil 8.00mil]
 )
 Attribute("import::src0" "outsmarts_left.sch")
-Attribute("PCB::grid::size" "5.00mil")
+Attribute("PCB::grid::size" "50.00mil")
 Attribute("PCB::grid::unit" "mil")
 Via[1090.00mil 1405.00mil 60.00mil 20.00mil 0.0000 35.00mil "" ""]
 Via[1090.00mil 1705.00mil 60.00mil 20.00mil 0.0000 35.00mil "" ""]
@@ -1226,9 +1226,9 @@ Layer(9 "silk")
 )
 Layer(10 "silk")
 (
-	Line[1050.00mil 1030.00mil 2325.00mil 1030.00mil 10.00mil 20.00mil "clearline"]
-	Line[2325.00mil 1030.00mil 2325.00mil 2055.00mil 10.00mil 20.00mil "clearline"]
-	Line[2325.00mil 2055.00mil 1050.00mil 2055.00mil 10.00mil 20.00mil "clearline"]
+	Line[1050.00mil 1055.00mil 2350.00mil 1055.00mil 10.00mil 20.00mil "clearline"]
+	Line[2350.00mil 1055.00mil 2350.00mil 2055.00mil 10.00mil 20.00mil "clearline"]
+	Line[2350.00mil 2055.00mil 1050.00mil 2055.00mil 10.00mil 20.00mil "clearline"]
 )
 NetList()
 (
