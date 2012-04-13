@@ -62,6 +62,12 @@ sch:
 
 sym: $(symbols)
 
+
+csv: $(schematics)
+	./sch2csv $(schematics) > abba.csv
+
+
+
 # run simulation(s)
 sim: cir
 	@echo "*** no simulations yet ***"
