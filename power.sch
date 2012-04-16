@@ -34,7 +34,7 @@ symversion=0.1
 T 47300 47700 5 10 1 1 270 0 1
 refdes=C901
 T 47100 47705 5 10 1 1 270 0 1
-value=1n
+value=10u
 T 47100 47300 5 10 0 1 270 0 1
 footprint=CAPPR-500P-1000D__Panasonic_M-Series-A-Type
 }
@@ -47,7 +47,7 @@ symversion=0.1
 T 47300 46600 5 10 1 1 270 0 1
 refdes=C903
 T 47100 46605 5 10 1 1 270 0 1
-value=1n
+value=10u
 T 47100 46200 5 10 0 1 270 0 1
 footprint=CAPPR-500P-1000D__Panasonic_M-Series-A-Type
 }
@@ -67,8 +67,8 @@ refdes=C902
 T 48400 47700 5 10 0 0 270 0 1
 symversion=0.1
 T 48100 47200 5 10 1 1 270 0 1
-value=1n
-T 47900 47400 5 10 1 1 270 0 1
+value=100n
+T 47900 47400 5 10 0 1 270 0 1
 footprint=0805
 }
 C 47500 46700 1 270 0 capacitor-1.sym
@@ -80,8 +80,8 @@ refdes=C904
 T 48400 46500 5 10 0 0 270 0 1
 symversion=0.1
 T 48000 46000 5 10 1 1 270 0 1
-value=1n
-T 47800 46200 5 10 1 1 270 0 1
+value=100n
+T 47800 46200 5 10 0 1 270 0 1
 footprint=0805
 }
 C 48300 47500 1 270 0 capacitor-1.sym
@@ -93,7 +93,7 @@ refdes=C905
 T 49200 47300 5 10 0 0 270 0 1
 symversion=0.1
 T 48800 46800 5 10 1 1 270 0 1
-value=1n
+value=10u
 T 48300 47500 5 10 0 1 0 0 1
 footprint=CAPPR-500P-1000D__Panasonic_M-Series-A-Type
 }
@@ -106,8 +106,8 @@ refdes=C906
 T 49900 47300 5 10 0 0 270 0 1
 symversion=0.1
 T 49500 46800 5 10 1 1 270 0 1
-value=1n
-T 49300 46800 5 10 1 1 270 0 1
+value=100n
+T 49300 46800 5 10 0 1 270 0 1
 footprint=0805
 }
 N 46400 48100 56300 48100 4
@@ -201,8 +201,8 @@ T 45700 46700 5 8 0 1 90 0 1
 footprint=HDR_JMP-2N
 T 43800 46500 5 8 0 0 90 0 1
 symversion=1.0
-T 45600 46700 5 8 0 1 90 0 1
-value=Jumper
+T 45600 46700 5 8 0 0 90 0 1
+value=jumper
 T 43600 46500 5 8 0 0 90 0 1
 value=jumper
 }
