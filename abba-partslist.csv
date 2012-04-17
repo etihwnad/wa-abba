@@ -22,11 +22,11 @@
 45600,45200,usb-codec.sch,C505,capacitor-2.sym,,,,POLARIZED_CAPACITOR,,CAPPR-200P-500D__Panasonic_M-Series-A-Type,,,,,,,,,,,,0.1,
 45600,44500,usb-codec.sch,C506,capacitor-2.sym,,,,POLARIZED_CAPACITOR,,CAPPR-200P-500D__Panasonic_M-Series-A-Type,,,,,,,,,,,,0.1,
 43900,48400,usb-codec.sch,C507,capacitor-1.sym,1u,,,CAPACITOR,,805,,,,,,,,,,,,0.1,490-4736-1-ND
-47200,46000,usb-codec.sch,C508,capacitor-1.sym,1u,,,CAPACITOR,,805,,,,,,,.033u,,,,,0.1,445-7523-1-ND
+47200,46000,usb-codec.sch,C508,capacitor-1.sym,1u,,,CAPACITOR,,805,,,,,,,,,,,,0.1,490-4736-1-ND
 52400,49600,usb-codec.sch,C509,capacitor-1.sym,1u,,,CAPACITOR,,805,,,,,,,,,,,,0.1,490-4736-1-ND
-47300,44400,usb-codec.sch,C510,capacitor-1.sym,1u,,,CAPACITOR,,805,,,,,,,.033u,,,,,0.1,445-7523-1-ND
-51400,46000,usb-codec.sch,C511,capacitor-1.sym,1u,,,CAPACITOR,,805,,,,,,,.033u,,,,,0.1,445-7523-1-ND
-51400,45200,usb-codec.sch,C512,capacitor-1.sym,1u,,,CAPACITOR,,805,,,,,,,.033u,,,,,0.1,445-7523-1-ND
+47300,44400,usb-codec.sch,C510,capacitor-1.sym,1u,,,CAPACITOR,,805,,,,,,,,,,,,0.1,490-4736-1-ND
+51400,46000,usb-codec.sch,C511,capacitor-1.sym,1u,,,CAPACITOR,,805,,,,,,,,,,,,0.1,490-4736-1-ND
+51400,45200,usb-codec.sch,C512,capacitor-1.sym,1u,,,CAPACITOR,,805,,,,,,,,,,,,0.1,490-4736-1-ND
 53200,44800,usb-codec.sch,C513,capacitor-2.sym,,,,POLARIZED_CAPACITOR,,CAPPR-200P-500D__Panasonic_M-Series-A-Type,,,,,,,,,,,,0.1,
 53200,43700,usb-codec.sch,C514,capacitor-2.sym,,,,POLARIZED_CAPACITOR,,CAPPR-200P-500D__Panasonic_M-Series-A-Type,,,,,,,,,,,,0.1,
 44000,49900,headphone.sch,C601,capacitor-2.sym,1u,,,POLARIZED_CAPACITOR,,CAPPR-500P-1000D__Panasonic_M-Series-A-Type.fp,,,,,,,,,,,,0.1,493-2065-ND
@@ -37,21 +37,21 @@
 43100,41800,headphone.sch,C606,capacitor-3.sym,100n,,,CAPACITOR,,805,,,,,,,,,,,,0.1,478-1395-1-ND
 44500,42500,headphone.sch,C607,capacitor-3.sym,100n,,,CAPACITOR,,805,,,,,,,,,,,,0.1,478-1395-1-ND
 46600,47900,power.sch,C901,capacitor-1.sym,10u,,,CAPACITOR,,CAPPR-500P-1000D__Panasonic_M-Series-A-Type,,,,,,,,,,,,0.1,P5856-ND
-47500,47900,power.sch,C902,capacitor-1.sym,100n,,,CAPACITOR,,805,,,,,,,.033u,,,,,0.1,445-7523-1-ND
+47500,47900,power.sch,C902,capacitor-1.sym,100n,,,CAPACITOR,,805,,,,,,,,,,,,0.1,478-1395-1-ND
 46600,46800,power.sch,C903,capacitor-1.sym,10u,,,CAPACITOR,,CAPPR-500P-1000D__Panasonic_M-Series-A-Type,,,,,,,,,,,,0.1,P5856-ND
-47500,46700,power.sch,C904,capacitor-1.sym,100n,,,CAPACITOR,,805,,,,,,,.033u,,,,,0.1,445-7523-1-ND
+47500,46700,power.sch,C904,capacitor-1.sym,100n,,,CAPACITOR,,805,,,,,,,,,,,,0.1,478-1395-1-ND
 48300,47500,power.sch,C905,capacitor-1.sym,10u,,,CAPACITOR,,CAPPR-500P-1000D__Panasonic_M-Series-A-Type,,,,,,,,,,,,0.1,P5856-ND
-49000,47500,power.sch,C906,capacitor-1.sym,100n,,,CAPACITOR,,805,,,,,,,.033u,,,,,0.1,445-7523-1-ND
+49000,47500,power.sch,C906,capacitor-1.sym,100n,,,CAPACITOR,,805,,,,,,,,,,,,0.1,478-1395-1-ND
 49100,48800,ingenious_left_in.sch,D101,diode-2.sym,,,,DIODE,,SOD123_FIXED,,,,,,,,,,,,,1N4148WTPMSCT-ND
 49500,48800,ingenious_left_in.sch,D102,diode-2.sym,,,,DIODE,,SOD123_FIXED,,,,,,,,,,,,,1N4148WTPMSCT-ND
 48900,45100,ingenious_left_in.sch,D103,diode-2.sym,,,,DIODE,,SOD123_FIXED,,,,,,,,,,,,,1N4148WTPMSCT-ND
 49700,45100,ingenious_left_in.sch,D104,diode-2.sym,,,,DIODE,,SOD123_FIXED,,,,,,,,,,,,,1N4148WTPMSCT-ND
 49700,45100,ingenious_left_in.sch,D105,zener-diode-2.sym,,,,DIODE,,SOD123_FIXED,,,,,,,,,,,,,MMSZ5242BFSCT-ND
 49500,50600,ingenious_left_in.sch,D106,zener-diode-2.sym,,,,DIODE,,SOD123_FIXED,,,,,,,,,,,,,MMSZ5242BFSCT-ND
-48300,48100,outsmarts_left.sch,D401,diode-2.sym,,,,1N4004,,SOD123_FIXED,,,,,,,"clear w/ dan",,,,,,BAV3004W-FDICT-ND
-49100,48100,outsmarts_left.sch,D402,diode-2.sym,,,,1N4004,,SOD123_FIXED,,,,,,,"clear w/ dan",,,,,,BAV3004W-FDICT-ND
-48600,46300,outsmarts_left.sch,D403,diode-2.sym,,,,1N4004,,SOD123_FIXED,,,,,,,"clear w/ dan",,,,,,BAV3004W-FDICT-ND
-49400,46300,outsmarts_left.sch,D404,diode-2.sym,,,,1N4004,,SOD123_FIXED,,,,,,,"clear w/ dan",,,,,,BAV3004W-FDICT-ND
+48300,48100,outsmarts_left.sch,D401,diode-2.sym,,,,1N4004,,SOD123_FIXED,,,,,,,,,,,,,1N4148WTPMSCT-ND
+49100,48100,outsmarts_left.sch,D402,diode-2.sym,,,,1N4004,,SOD123_FIXED,,,,,,,,,,,,,1N4148WTPMSCT-ND
+48600,46300,outsmarts_left.sch,D403,diode-2.sym,,,,1N4004,,SOD123_FIXED,,,,,,,,,,,,,1N4148WTPMSCT-ND
+49400,46300,outsmarts_left.sch,D404,diode-2.sym,,,,1N4004,,SOD123_FIXED,,,,,,,,,,,,,1N4148WTPMSCT-ND
 45000,45500,usb-codec.sch,D501,schottky.sym,,,,"Schottky Diode",,2LEAD_SMT,RB521G-30T2RCT-ND,,,,,,,,,,,,RB521G-30T2RCT-ND
 40300,45500,ingenious_left_in.sch,J101,xlr-combo-1.sym,NCJ10FI-H,,,CONNECTOR_11,,CON_XLR-NCJ10FI-H__Neutrik-Combo,,,,,,,,,,,,,
 40700,42700,ingenious_left_in.sch,J102,connector3-1.sym,,,,CONNECTOR_3,,CON_HDR_254P-3N__Molex-KK,,,,,,,,,,,,,
@@ -78,26 +78,26 @@
 40400,46700,power.sch,J907,connector2-1.sym,,,,CONNECTOR_2,,CON_HDR_254P-2N__Molex-KK,,,,,,,,,,,,,
 45900,46400,power.sch,J908,jumper.sym,jumper,,,,,HDR_JMP-2N,,,,,,,,,,,,1,
 43400,47600,ingenious_left_in.sch,L101,cm-choke-1.sym,RN102-0.3-02,,,INDUCTOR,,IND_Schaffner_RN102,,,,,,,,,,,,0.1,817-1523-ND
-47100,47300,ingenious_left_in.sch,R101,resistor-1.sym,100,,,RESISTOR,,805,,,,,,,,,,,,,P100DACT-ND
-45200,48500,ingenious_left_in.sch,R102,resistor-1.sym,100,,,RESISTOR,,805,,,,,,,,,,,,,P100DACT-ND
-45200,46100,ingenious_left_in.sch,R103,resistor-1.sym,100,,,RESISTOR,,805,,,,,,,,,,,,,P100DACT-ND
-45400,48700,usb-codec.sch,R501,resistor-1.sym,1k5,,,RESISTOR,,805,,,,,,,,,,,,,P1.5KDACT-ND
+47100,47300,ingenious_left_in.sch,R101,resistor-1.sym,100,,,RESISTOR,,805,,,,,,,,,,,,,RR12P100DCT-ND
+45200,48500,ingenious_left_in.sch,R102,resistor-1.sym,100,,,RESISTOR,,805,,,,,,,,,,,,,RR12P100DCT-ND
+45200,46100,ingenious_left_in.sch,R103,resistor-1.sym,100,,,RESISTOR,,805,,,,,,,,,,,,,RR12P100DCT-ND
+45400,48700,usb-codec.sch,R501,resistor-1.sym,1k5,,,RESISTOR,,805,,,,,,,,,,,,,RR12P1.5KDCT-ND
 43300,47600,usb-codec.sch,R502,resistor-1.sym,22R,,,RESISTOR,,805,,,,,,,,,,,,,RR12Q22DCT-ND
-47800,48800,usb-codec.sch,R503,resistor-1.sym,1M,,,RESISTOR,,805,,,,,,,,,,,,,P1MDACT-ND
-44300,44600,usb-codec.sch,R504,resistor-1.sym,27k,,,RESISTOR,,805,,,,,,,,,,,,,P27KDACT-ND
+47800,48800,usb-codec.sch,R503,resistor-1.sym,1M,,,RESISTOR,,805,,,,,,,,,,,,,RR12P1.0MDCT-ND
+44300,44600,usb-codec.sch,R504,resistor-1.sym,27k,,,RESISTOR,,805,,,,,,,,,,,,,RR12P27.0KDCT-ND
 43300,47300,usb-codec.sch,R505,resistor-1.sym,22R,,,RESISTOR,,805,,,,,,,,,,,,,RR12Q22DCT-ND
 43300,47000,usb-codec.sch,R506,resistor-1.sym,22R,,,RESISTOR,,805,,,,,,,,,,,,,RR12Q22DCT-ND
-44300,43600,usb-codec.sch,R507,resistor-1.sym,13k,,,RESISTOR,,805,,,,,,,,,,,,,P13KDACT-ND
-46400,49700,headphone.sch,R601,resistor-1.sym,1k,,,RESISTOR,,805,,,,,,,,,,,,,P1.0KDACT-ND
+44300,43600,usb-codec.sch,R507,resistor-1.sym,13k,,,RESISTOR,,805,,,,,,,,,,,,,RR12P13.0KDCT-ND
+46400,49700,headphone.sch,R601,resistor-1.sym,1k,,,RESISTOR,,805,,,,,,,,,,,,,RR12P1.0KDCT-ND
 45400,44100,headphone.sch,R602,pot-3_dual.sym,10k,,,VARIABLE_RESISTOR,,pot_panasonic_EVJ-series.fp,,,,2,,,,1,"2:4,5,6",,,,P2T3103-ND
 45400,47900,headphone.sch,R602,pot-3_dual.sym,10k,,,VARIABLE_RESISTOR,,pot_panasonic_EVJ-series.fp,,,,2,,,,2,"2:4,5,6",,,,P2T3103-ND
-48400,49700,headphone.sch,R603,resistor-1.sym,1k,,,RESISTOR,,805,,,,,,,,,,,,,P1.0KDACT-ND
-47500,48200,headphone.sch,R604,resistor-1.sym,100k,,,RESISTOR,,805,,,,,,,,,,,,,P100KDACT-ND
-46400,45900,headphone.sch,R605,resistor-1.sym,1k,,,RESISTOR,,805,,,,,,,,,,,,,P1.0KDACT-ND
-50300,48500,headphone.sch,R607,resistor-1.sym,1k,,,RESISTOR,,805,,,,,,,,,,,,,P1.0KDACT-ND
-48400,45900,headphone.sch,R608,resistor-1.sym,1k,,,RESISTOR,,805,,,,,,,,,,,,,P1.0KDACT-ND
-47500,44400,headphone.sch,R609,resistor-1.sym,100k,,,RESISTOR,,805,,,,,,,,,,,,,P100KDACT-ND
-50300,44700,headphone.sch,R610,resistor-1.sym,1k,,,RESISTOR,,805,,,,,,,,,,,,,P1.0KDACT-ND
+48400,49700,headphone.sch,R603,resistor-1.sym,1k,,,RESISTOR,,805,,,,,,,,,,,,,RR12P1.0KDCT-ND
+47500,48200,headphone.sch,R604,resistor-1.sym,100k,,,RESISTOR,,805,,,,,,,,,,,,,RR12P100KDCT-ND
+46400,45900,headphone.sch,R605,resistor-1.sym,1k,,,RESISTOR,,805,,,,,,,,,,,,,RR12P1.0KDCT-ND
+50300,48500,headphone.sch,R607,resistor-1.sym,1k,,,RESISTOR,,805,,,,,,,,,,,,,RR12P1.0KDCT-ND
+48400,45900,headphone.sch,R608,resistor-1.sym,1k,,,RESISTOR,,805,,,,,,,,,,,,,RR12P1.0KDCT-ND
+47500,44400,headphone.sch,R609,resistor-1.sym,100k,,,RESISTOR,,805,,,,,,,,,,,,,RR12P100KDCT-ND
+50300,44700,headphone.sch,R610,resistor-1.sym,1k,,,RESISTOR,,805,,,,,,,,,,,,,RR12P1.0KDCT-ND
 51500,46600,ingenious_left_in.sch,U101,that1200-1.sym,THAT1200S,,,THAT120x,,SO8,,,,,,,,,,,,,
 44100,46200,outsmarts_left.sch,U401,that1646.sym,,,,THAT1646,,SO8,,,,,,,,,,,,,
 41800,44300,usb-codec.sch,U501,reg103-a.sym,,,,REG103-A,,SO8,,,,,,,,,,,,,REG103UA-A-ND
